@@ -6,10 +6,10 @@ public class perpustakaandemo11_cm {
      public static void main(String[] args) {
     Scanner farel11 = new Scanner(System.in);
 
-    mahasiswa11[] MHS = {
-            new mahasiswa11_cm(NIM, Nama, Prodi),
-            new mahasiswa11_cm(NIM, Nama, Prodi),
-            new mahasiswa11_cm(NIM, Nama, Prodi),
+    mahasiswa11_cm[] MHS = {
+            new mahasiswa11_cm("22001","Andi","TI"),
+            new mahasiswa11_cm("22002","Sifa","TI"),
+            new mahasiswa11_cm("22003","Doni","TI")
         };
 
           buku11_cm[] Buku = {
@@ -21,9 +21,11 @@ public class perpustakaandemo11_cm {
 
         peminjaman11_cm[] Pinjam = {
             new peminjaman11_cm(MHS[0], Buku[0],7),
-            new peminjaman11_cm(MHS[0], Buku[0],7),
-            new peminjaman11_cm(MHS[0], Buku[0],7),
-            new peminjaman11_cm(MHS[0], Buku[0],7),
+            new peminjaman11_cm(MHS[1], Buku[1],3),
+            new peminjaman11_cm(MHS[2], Buku[2],10),
+            new peminjaman11_cm(MHS[2], Buku[3],6),
+            new peminjaman11_cm(MHS[0], Buku[1],4)
+        };
 
         int Pilih;
         do {
@@ -39,8 +41,8 @@ public class perpustakaandemo11_cm {
 
             switch (Pilih) {
                 case 1:
-                    for(mahasiswa11 m : MHS){
-                        m.TampilInformasi();
+                    for(mahasiswa11_cm m : MHS){
+                        m.Tampil();
                     }
                     break;
 
@@ -85,6 +87,11 @@ public class perpustakaandemo11_cm {
                     }
                     break;
             }
+            peminjaman11_cm pinjam = new peminjaman11_cm(MHS, buku, 7);
+pinjam.Tampil(); // tampil normal
+pinjam.Cancel();
+pinjam.Tampil(); // tampil status dibatalkan
+
         } while (Pilih != 6);
-}
+    }
 }
