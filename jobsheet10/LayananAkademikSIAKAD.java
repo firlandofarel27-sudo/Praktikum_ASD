@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class LayananAkademikSIAKAD {
     public static void main(String[] args) {
-        Scanner Akbar21 = new Scanner(System.in);
-         AntianLayanan Antrian = new AntianLayanan(5);
+        Scanner farel11 = new Scanner(System.in);
+         AntrianLayanan Antrian = new AntrianLayanan(5);
          int Pilihan;
 
          do {
@@ -18,23 +18,23 @@ public class LayananAkademikSIAKAD {
             System.out.println("6. Cek Antrian paling belakang");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
-            Pilihan = Akbar21.nextInt(); Akbar21.nextLine();  
+            Pilihan = farel11.nextInt(); farel11.nextLine();  
             
             switch (Pilihan) {
                 case 1:
                     System.out.print("NIM   : ");
-                    String NIM = Akbar21.nextLine();
+                    String NIM = farel11.nextLine();
                     System.out.print("Nama  : ");
-                    String Nama = Akbar21.nextLine();
+                    String Nama = farel11.nextLine();
                     System.out.print("Prodi : ");
-                    String Prodi = Akbar21.nextLine();
+                    String Prodi = farel11.nextLine();
                     System.out.print("Kelas : ");
-                    String Kelas = Akbar21.nextLine();
-                    Mahasiswa MHS = new Mahasiswa(NIM, Nama, Prodi, Kelas);
+                    String Kelas = farel11.nextLine();
+                    mahasiswa MHS = new mahasiswa(NIM, Nama, Prodi, Kelas);
                     Antrian.TambahAntian(MHS);
                     break; 
                 case 2:
-                    Mahasiswa diLayani = Antrian.LayaniMahasiswa();                
+                    mahasiswa diLayani = Antrian.LayaniMahasiswa();                
                     if (diLayani != null) {
                         System.out.print("Melayani mahasiswa: ");
                         diLayani.TampilkanData();
@@ -59,6 +59,6 @@ public class LayananAkademikSIAKAD {
                     System.out.println("Pilihan tidak valid.");
             }
         } while (Pilihan != 0);
-        Akbar21.close();
+        farel11.close();
     }
 }
