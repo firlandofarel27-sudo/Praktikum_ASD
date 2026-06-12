@@ -19,7 +19,7 @@ class LinkedListRekap {
     public void tambahPesanan(String namaPesanan) {
         NodeRekap current = head;
 
-         // Cek apakah menu sudah ada
+    // Cek apakah menu sudah ada
         while (current != null) {
             if (current.namaPesanan.equalsIgnoreCase(namaPesanan)) {
                 current.jumlah++;
@@ -64,6 +64,7 @@ class LinkedListRekap {
     public void tampilkanRekap() {
         sortDescending();
 
+        System.out.println("==  SELAMAT DATANG  ==");
         System.out.println("=== REKAP PESANAN ===");
         NodeRekap current = head;
 
