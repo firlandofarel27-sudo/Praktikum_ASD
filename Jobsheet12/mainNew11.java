@@ -11,6 +11,7 @@ public class mainNew11 {
         rekap.tambahPesanan("Es Teh");
         rekap.tambahPesanan("Nasi Goreng");
         rekap.tambahPesanan("Mie Ayam");
+        rekap.tambahPesanan("Kwetiau");
 
         rekap.tampilkanRekap();
     }
